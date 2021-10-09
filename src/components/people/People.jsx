@@ -5,14 +5,14 @@ import {
     StyledInput,
 } from "./People.styled";
 
-const People = ({ props, children }) => {
+const People = ({ numOfPeople, children }) => {
     return (
         <>
             <StyledPeopleContainer>
                 <StyledPeopleHeader>{children}</StyledPeopleHeader>
                 <span>
                     <i className="fas fa-user"></i>
-                    <StyledInput placeholder="5"></StyledInput>
+                    <StyledInput placeholder={numOfPeople}></StyledInput>
                 </span>
             </StyledPeopleContainer>
         </>
