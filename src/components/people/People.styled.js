@@ -39,12 +39,17 @@ export const StyledInput = styled.input`
     border: none;
     border-radius: var(--radius-corner-small);
     font-size: var(--fs-form-inputs);
+
+    color: var(--color-very-dark-cyan);
+    font-weight: var(--fw-bold);
+    text-align: right;
+    padding-right: 0.7em;
+    font-family: var(--ff-primary);
     
     ::placeholder {
         color: var(--color-very-dark-cyan);
         font-weight: var(--fw-bold);
         text-align: right;
-        padding-right: 0.7em;
         font-family: var(--ff-primary);
     }
 `;

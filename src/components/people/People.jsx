@@ -5,14 +5,20 @@ import {
     StyledInput,
 } from "./People.styled";
 
-const People = ({ numOfPeople, children }) => {
+const People = ({ numOfPeople, handleNumOfPeopleChange, children }) => {
     return (
         <>
             <StyledPeopleContainer>
                 <StyledPeopleHeader>{children}</StyledPeopleHeader>
                 <span>
                     <i className="fas fa-user"></i>
-                    <StyledInput placeholder={numOfPeople}></StyledInput>
+                    <StyledInput
+                        onChange={(e) => handleNumOfPeopleChange(e.target.value)}
+                        placeholder={numOfPeople}
+                        type="text"
+                        minLength="1"
+                        maxLength="2"
+                    ></StyledInput>
                 </span>
             </StyledPeopleContainer>
         </>

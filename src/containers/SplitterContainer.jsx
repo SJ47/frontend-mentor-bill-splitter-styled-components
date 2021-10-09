@@ -8,7 +8,7 @@ import Tip from "../components/tip/Tip";
 const SplitterContainer = () => {
     const [bill, setBill] = useState(0.0);
     const [tipPerc, setTipPerc] = useState(15);
-    const [numOfPeople, setNumOfPeople] = useState(2);
+    const [numOfPeople, setNumOfPeople] = useState(1);
     const [tipAmountPerPerson, setTipAmountPerPerson] = useState(0.0);
     const [totalPerPerson, setTotalPerPerson] = useState(0);
 
@@ -24,6 +24,10 @@ const SplitterContainer = () => {
         setBill(value);
     };
 
+    const handleNumOfPeopleChange = (value) => {
+        setNumOfPeople(value);
+    };
+
     useEffect(() => {
         calculateTipAmountPerPerson();
         calculateTotalAmountPerPerson();
@@ -34,7 +38,12 @@ const SplitterContainer = () => {
             <StyledSplitterContainer>
                 <Bill handleInputChange={handleInputChange}>Bill</Bill>
                 <Tip />
-                <People numOfPeople={numOfPeople}>Number of People</People>
+                <People
+                    numOfPeople={numOfPeople}
+                    handleNumOfPeopleChange={handleNumOfPeopleChange}
+                >
+                    Number of People
+                </People>
                 <Result
                     tipAmountPerPerson={tipAmountPerPerson}
                     totalPerPerson={totalPerPerson}
