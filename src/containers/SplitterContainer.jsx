@@ -28,16 +28,21 @@ const SplitterContainer = () => {
         setNumOfPeople(value);
     };
 
+    const handleTipPercChange = (value) => {
+        setTipPerc(value);
+        // console.log("Tip percentage change to: ", value);
+    };
+
     useEffect(() => {
         calculateTipAmountPerPerson();
         calculateTotalAmountPerPerson();
-    }, [bill, tipAmountPerPerson, numOfPeople]);
+    }, [bill, tipAmountPerPerson, numOfPeople, tipPerc]);
 
     return (
         <>
             <StyledSplitterContainer>
                 <Bill handleInputChange={handleInputChange}>Bill</Bill>
-                <Tip />
+                <Tip handleTipPercChange={handleTipPercChange} />
                 <People
                     numOfPeople={numOfPeople}
                     handleNumOfPeopleChange={handleNumOfPeopleChange}
