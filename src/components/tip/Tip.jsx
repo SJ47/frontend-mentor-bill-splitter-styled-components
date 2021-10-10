@@ -33,6 +33,7 @@ const Tip = ({ handleTipPercChange, bg }) => {
                 </StyledTipContent>
                 <StyledTipCustom
                     placeholder="Custom"
+                    type="number"
                     onChange={(e) => handleTipPercChange(e.target.value)}
                 ></StyledTipCustom>
             </StyledTipContainer>

@@ -13,11 +13,13 @@ const People = ({ numOfPeople, handleNumOfPeopleChange, children }) => {
                 <span>
                     <i className="fas fa-user"></i>
                     <StyledInput
-                        onChange={(e) => handleNumOfPeopleChange(e.target.value)}
+                        type="number"
+                        step="1"
                         value={numOfPeople}
-                        type="text"
-                        minLength="1"
-                        maxLength="2"
+                        placeholder="0"
+                        min="1"
+                        max="99"
+                        onChange={(e) => handleNumOfPeopleChange(e.target.value)}
                     ></StyledInput>
                 </span>
             </StyledPeopleContainer>

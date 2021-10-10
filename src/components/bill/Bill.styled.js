@@ -54,4 +54,5 @@ export const StyledInput = styled.input`
         font-family: var(--ff-primary);
     }
 
+
 `;

@@ -12,11 +12,12 @@ const Bill = ({ props, bill, children, handleInputChange }) => {
                 <StyledBillHeader>{children}</StyledBillHeader>
                 <span>
                     <StyledInput
-                        type="text"
+                        type="number"
+                        step="0.01"
+                        value={bill}
                         placeholder="0.00"
-                        // value={bill}
-                        minLength="1"
-                        maxLength="7"
+                        min="0"
+                        max="999999.99"
                         onChange={(e) => handleInputChange(e.target.value)}
                     ></StyledInput>
                 </span>
