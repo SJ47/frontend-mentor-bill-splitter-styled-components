@@ -3,6 +3,7 @@ import {
     StyledTipContainer,
     StyledTipHeader,
     StyledTipContent,
+    StyledTipCustom,
 } from "./Tip.styled";
 
 const Tip = ({ handleTipPercChange }) => {
@@ -29,12 +30,10 @@ const Tip = ({ handleTipPercChange }) => {
                 <StyledTipContent onClick={() => handleTipPercChange(50)}>
                     50%
                 </StyledTipContent>
-                <StyledTipContent
-                    bg="var(--color-light-grayish-cyan)"
-                    fg="var(--color-dark-grayish-cyan)"
-                >
-                    Custom
-                </StyledTipContent>
+                <StyledTipCustom
+                    placeholder="Custom"
+                    onChange={(e) => handleTipPercChange(e.target.value)}
+                ></StyledTipCustom>
             </StyledTipContainer>
         </>
     );

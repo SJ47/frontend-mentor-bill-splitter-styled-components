@@ -23,4 +23,33 @@ export const StyledTipContent = styled.div`
     color: ${({ fg }) => fg || "var(--color-white)"};
     font-size: var(--fs-form-inputs);
     font-weight: var(--fw-bold);
+
+    &:hover{
+        cursor: pointer;
+    }
+`;
+
+export const StyledTipCustom = styled.input`
+    flex: 1 1 40%;
+    border-radius: var(--radius-corner-small);
+    background: var(--color-light-grayish-cyan2);
+    color: var(--color-dark-grayish-cyan);
+    border: none;
+    width: 50%;
+    font-size: var(--fs-form-inputs);
+    font-weight: var(--fw-bold);
+    text-align: right;
+    padding-right: 0.7em;
+
+    ::placeholder {
+        color: var(--color-very-dark-cyan);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-form-inputs);
+        font-family: var(--ff-primary);
+        color: var(--color-dark-grayish-cyan);
+    }
+
+    &:hover{
+        cursor: text;
+    }
 `;

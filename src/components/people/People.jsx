@@ -14,7 +14,7 @@ const People = ({ numOfPeople, handleNumOfPeopleChange, children }) => {
                     <i className="fas fa-user"></i>
                     <StyledInput
                         onChange={(e) => handleNumOfPeopleChange(e.target.value)}
-                        placeholder={numOfPeople}
+                        value={numOfPeople}
                         type="text"
                         minLength="1"
                         maxLength="2"
