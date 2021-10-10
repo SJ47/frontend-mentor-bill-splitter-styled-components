@@ -14,18 +14,24 @@ export const StyledTipHeader = styled.h4`
     margin-bottom: 1em;
 `;
 
-export const StyledTipContent = styled.div`
+export const StyledTipContent = styled.button`
     flex: 1 1 40%;
     text-align: center;
     border-radius: var(--radius-corner-small);
-    padding: .3em;
+    padding: .4em 0;
     background: ${({ bg }) => bg || "var(--color-very-dark-cyan)"};
     color: ${({ fg }) => fg || "var(--color-white)"};
     font-size: var(--fs-form-inputs);
     font-weight: var(--fw-bold);
+    border: none;
 
     &:hover{
         cursor: pointer;
+    }
+
+    &:focus {
+        background: var(--color-strong-cyan);
+        color:var(--color-very-dark-cyan);
     }
 `;
 

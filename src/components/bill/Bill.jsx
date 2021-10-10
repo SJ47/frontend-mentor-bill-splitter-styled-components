@@ -5,7 +5,7 @@ import {
     StyledInput,
 } from "./Bill.styled";
 
-const Bill = ({ props, children, handleInputChange }) => {
+const Bill = ({ props, bill, children, handleInputChange }) => {
     return (
         <>
             <StyledBillContainer>
@@ -14,7 +14,8 @@ const Bill = ({ props, children, handleInputChange }) => {
                     <StyledInput
                         type="text"
                         placeholder="0.00"
-                        minLength="3"
+                        // value={bill}
+                        minLength="1"
                         maxLength="7"
                         onChange={(e) => handleInputChange(e.target.value)}
                     ></StyledInput>

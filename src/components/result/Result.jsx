@@ -6,7 +6,7 @@ import {
     StyledTotalAmountContainer,
 } from "./Result.styled";
 
-const Result = ({ tipAmountPerPerson, totalPerPerson }) => {
+const Result = ({ tipAmountPerPerson, totalPerPerson, handleReset }) => {
     return (
         <StyledResultContainer>
             <StyledTipAmountContainer>
@@ -25,7 +25,7 @@ const Result = ({ tipAmountPerPerson, totalPerPerson }) => {
                 <div>${totalPerPerson}</div>
             </StyledTotalAmountContainer>
 
-            <StyledResultButton>RESET</StyledResultButton>
+            <StyledResultButton onClick={handleReset}>RESET</StyledResultButton>
         </StyledResultContainer>
     );
 };

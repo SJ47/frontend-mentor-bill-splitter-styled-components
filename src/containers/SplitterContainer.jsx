@@ -7,7 +7,7 @@ import Tip from "../components/tip/Tip";
 
 const SplitterContainer = () => {
     const [bill, setBill] = useState(0.0);
-    const [tipPerc, setTipPerc] = useState(15);
+    const [tipPerc, setTipPerc] = useState(0);
     const [numOfPeople, setNumOfPeople] = useState(1);
     const [tipAmountPerPerson, setTipAmountPerPerson] = useState(0.0);
     const [totalPerPerson, setTotalPerPerson] = useState(0);
@@ -30,7 +30,10 @@ const SplitterContainer = () => {
 
     const handleTipPercChange = (value) => {
         setTipPerc(value);
-        // console.log("Tip percentage change to: ", value);
+    };
+
+    const handleReset = () => {
+        window.location.reload(false);
     };
 
     useEffect(() => {
@@ -41,7 +44,9 @@ const SplitterContainer = () => {
     return (
         <>
             <StyledSplitterContainer>
-                <Bill handleInputChange={handleInputChange}>Bill</Bill>
+                <Bill bill={bill} handleInputChange={handleInputChange}>
+                    Bill
+                </Bill>
                 <Tip handleTipPercChange={handleTipPercChange} />
                 <People
                     numOfPeople={numOfPeople}
@@ -52,6 +57,7 @@ const SplitterContainer = () => {
                 <Result
                     tipAmountPerPerson={tipAmountPerPerson}
                     totalPerPerson={totalPerPerson}
+                    handleReset={handleReset}
                 />
             </StyledSplitterContainer>
         </>
