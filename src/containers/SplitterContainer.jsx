@@ -73,12 +73,22 @@ const SplitterContainer = () => {
                     Bill
                 </Bill>
                 <Tip handleTipPercChange={handleTipPercChange} />
-                <People
-                    numOfPeople={numOfPeople}
-                    handleNumOfPeopleChange={handleNumOfPeopleChange}
-                >
-                    Number of People
-                </People>
+                {numOfPeople ? (
+                    <People
+                        numOfPeople={numOfPeople}
+                        handleNumOfPeopleChange={handleNumOfPeopleChange}
+                    >
+                        Number of People
+                    </People>
+                ) : (
+                    <People
+                        numOfPeople={numOfPeople}
+                        handleNumOfPeopleChange={handleNumOfPeopleChange}
+                    >
+                        Number of People{" "}
+                        <p style={{ color: "red" }}>&nbsp; Can't be zero</p>
+                    </People>
+                )}
                 <Result
                     tipAmountPerPerson={tipAmountPerPerson}
                     totalPerPerson={totalPerPerson}

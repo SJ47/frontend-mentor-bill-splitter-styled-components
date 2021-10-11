@@ -24,9 +24,7 @@ export const StyledPeopleContainer = styled.div`
     @media (min-width: 776px) {
         grid-column-start: 1;
         grid-row-start: 4;
-        /* background: orange; */
         margin-bottom: 2em;
-        /* padding: 0; */
     }
 `;
 
@@ -48,7 +46,7 @@ export const StyledInput = styled.input`
     margin-bottom: 2em;
     background: var(--color-light-grayish-cyan2);
     height: 2em;
-    border: none;
+    border: ${props => props.value ? "none" : "1px solid red"};
     border-radius: var(--radius-corner-small);
     font-size: var(--fs-form-inputs);
 

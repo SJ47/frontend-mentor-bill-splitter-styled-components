@@ -6,6 +6,10 @@ export const StyledSplitterContainer = styled.div`
     border-top-right-radius: var(--radius-corner);
     display: grid;
     grid-template-columns: 1fr;
+
+    p {
+        display: inline;
+    }
    
 
     @media (min-width: 776px) {
