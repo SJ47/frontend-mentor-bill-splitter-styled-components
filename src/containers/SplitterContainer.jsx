@@ -55,8 +55,6 @@ const SplitterContainer = () => {
 
     const handleTipPercChange = (value) => {
         setTipPerc(value);
-
-        console.log(value);
     };
 
     const handleReset = () => {
@@ -74,23 +72,19 @@ const SplitterContainer = () => {
                 <Bill bill={bill} handleInputChange={handleInputChange}>
                     Bill
                 </Bill>
+
                 <Tip handleTipPercChange={handleTipPercChange} />
-                {numOfPeople ? (
-                    <People
-                        numOfPeople={numOfPeople}
-                        handleNumOfPeopleChange={handleNumOfPeopleChange}
-                    >
-                        Number of People
-                    </People>
-                ) : (
-                    <People
-                        numOfPeople={numOfPeople}
-                        handleNumOfPeopleChange={handleNumOfPeopleChange}
-                    >
-                        Number of People{" "}
+
+                <People
+                    numOfPeople={numOfPeople}
+                    handleNumOfPeopleChange={handleNumOfPeopleChange}
+                >
+                    Number of People
+                    {!numOfPeople && (
                         <p style={{ color: "red" }}>&nbsp; Can't be zero</p>
-                    </People>
-                )}
+                    )}
+                </People>
+
                 <Result
                     tipAmountPerPerson={tipAmountPerPerson}
                     totalPerPerson={totalPerPerson}
