@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX/hub/splitter-tip-calculator-using-react-styled-components-js-htmlcss-EYCFDj5g5)
+-   Live Site URL: [Splitter Tip Calculator](https://splitter-tip-calculator.scottjohnston.dev)
 
 ## My process
 
@@ -51,7 +51,7 @@ More exposure to styled components in React.
 
 ### Continued development
 
-I plan to continue getting more familiar and experience with Styled Components.
+I plan to continue getting more familiar and experience with Styled Components. Also need to refactor a number of areas.
 
 ## Author
 
