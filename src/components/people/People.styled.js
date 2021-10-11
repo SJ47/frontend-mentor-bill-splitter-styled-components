@@ -20,6 +20,14 @@ export const StyledPeopleContainer = styled.div`
         top: 15px;
         right: -40px;
     }
+
+    @media (min-width: 776px) {
+        grid-column-start: 1;
+        grid-row-start: 4;
+        /* background: orange; */
+        margin-bottom: 2em;
+        /* padding: 0; */
+    }
 `;
 
 export const StyledPeopleHeader = styled.h4`
@@ -27,6 +35,10 @@ export const StyledPeopleHeader = styled.h4`
     margin-left: 1.85em;
     margin-bottom: .4em;
     margin-top: 2em;
+
+    @media (min-width: 776px) {
+        margin-top: 0;
+    }
 `;
 
 export const StyledInput = styled.input`
@@ -52,4 +64,5 @@ export const StyledInput = styled.input`
         text-align: right;
         font-family: var(--ff-primary);
     }
+
 `;

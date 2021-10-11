@@ -12,14 +12,16 @@ export const StyledBillContainer = styled.div`
     }
 
     span:before {
-     position: absolute;
-    content:"$";
-    color: var(--color-dark-grayish-cyan2);
-    font-size: var(--fs-form-inputs);
-    font-family: var(--ff-primary);
-    padding-top: .2em;
-    padding-left: 2em;
-    opacity: .6;
+        position: relative;
+        content:"$";
+        color: var(--color-dark-grayish-cyan2);
+        font-size: var(--fs-form-inputs);
+        font-family: var(--ff-primary);
+        padding-top: .2em;
+        padding-left: 2em;
+        opacity: .6;
+        right: 10px;
+
  }
 `;
 
@@ -34,6 +36,7 @@ export const StyledInput = styled.input`
     width: 85%;
     margin: 0 auto;
     margin-bottom: 2em;
+    margin-left: -1.5em;
     background: var(--color-light-grayish-cyan2);
     height: 2em;
     border: none;
@@ -54,5 +57,9 @@ export const StyledInput = styled.input`
         font-family: var(--ff-primary);
     }
 
+    @media (min-width: 776px) {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 
 `;

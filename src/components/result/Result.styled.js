@@ -13,6 +13,13 @@ export const StyledResultContainer = styled.div`
     text-align: center;
     margin-top: 1em;
     padding-bottom: .8em;
+
+    @media (min-width: 776px) {
+        grid-column-start: 2;
+        grid-row-start: span 4;
+        margin-bottom: 0em;
+        padding-top: 1em;
+    }
 `;
 
 export const StyledTipAmountContainer = styled.div`
@@ -65,4 +72,8 @@ export const StyledResultButton = styled.button`
     font-size: larger;
     font-weight: var(--fw-bold);
     cursor: pointer;
+
+    @media (min-width: 776px) {
+        margin-top: 8em;
+    }
 `;

@@ -35,12 +35,28 @@ const GlobalStyles = createGlobalStyle`
         background: #292828;
     }
 
+    body {
+        @media (min-width: 776px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+    }
+
     #root {
         background: var(--color-light-grayish-cyan);
-        width: var(--layout-mobile);
+        min-width: var(--layout-mobile);
         margin: 0 auto;
         font-family: var(--ff-primary);
         border: 1px solid grey;
+        width: 376px;
+
+        @media (min-width: 776px) {
+            /* background: orange; */
+            width: 900px;
+            max-width: 1440px;
+        }
     }
 
     /* Chrome, Safari, Edge, Opera */

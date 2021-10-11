@@ -6,12 +6,22 @@ export const StyledTipContainer = styled.div`
     gap: 1em;
     width: 85%;
     margin: 0 auto;
+
+    @media (min-width: 776px) {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
 `;
 
 export const StyledTipHeader = styled.h4`
     color: var(--color-dark-grayish-cyan);
     margin-left: 1.85em;
     margin-bottom: 1em;
+     
+    @media (min-width: 776px) {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
 `;
 
 export const StyledTipContent = styled.button`
@@ -32,6 +42,12 @@ export const StyledTipContent = styled.button`
     &:focus {
         background: var(--color-strong-cyan);
         color:var(--color-very-dark-cyan);
+    }
+
+    @media (min-width: 776px) {
+        flex: 1 1 25%;
+        height: 50px;
+        margin-bottom: -1em;
     }
 `;
 
@@ -57,5 +73,11 @@ export const StyledTipCustom = styled.input`
 
     &:hover{
         cursor: text;
+    }
+
+    @media (min-width: 776px) {
+        flex: 1 1 25%;
+                height: 50px;
+        margin-bottom: 0em;
     }
 `;
