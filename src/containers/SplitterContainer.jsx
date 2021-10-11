@@ -59,6 +59,11 @@ const SplitterContainer = () => {
 
     const handleReset = () => {
         window.location.reload(false);
+        // setBill("");
+        // setNumOfPeople("");
+        // setTipPerc(0);
+        //TODO: need a way to reset Custom % button back to saying Custom if a custom number has been entered when reset button is clicked
+        // Otherwise, remain with reload approach above
     };
 
     useEffect(() => {

@@ -6,7 +6,7 @@ import {
     StyledTipCustom,
 } from "./Tip.styled";
 
-const Tip = ({ handleTipPercChange, bg }) => {
+const Tip = ({ handleTipPercChange }) => {
     const percIds = [{ id: 5 }, { id: 10 }, { id: 15 }, { id: 25 }, { id: 50 }];
 
     const buttonList = percIds.map((btn) => {
@@ -25,12 +25,11 @@ const Tip = ({ handleTipPercChange, bg }) => {
             <StyledTipHeader>Select Tip %</StyledTipHeader>
             <StyledTipContainer>
                 {buttonList}
-
                 <StyledTipCustom
                     placeholder="Custom"
                     type="number"
                     onChange={(e) => handleTipPercChange(e.target.value)}
-                ></StyledTipCustom>
+                />
             </StyledTipContainer>
         </>
     );
