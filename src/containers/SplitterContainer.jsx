@@ -13,11 +13,19 @@ const SplitterContainer = () => {
     const [totalPerPerson, setTotalPerPerson] = useState(0);
 
     const calculateTipAmountPerPerson = () => {
-        setTipAmountPerPerson((bill / numOfPeople) * (tipPerc / 100));
+        numOfPeople
+            ? setTipAmountPerPerson(
+                  ((bill / numOfPeople) * (tipPerc / 100)).toFixed(2)
+              )
+            : setTipAmountPerPerson(0);
     };
 
     const calculateTotalAmountPerPerson = () => {
-        setTotalPerPerson(bill / numOfPeople + tipAmountPerPerson);
+        numOfPeople
+            ? setTotalPerPerson(
+                  (bill / numOfPeople + tipAmountPerPerson / 1).toFixed(2)
+              )
+            : setTotalPerPerson(0);
     };
 
     const handleInputChange = (value) => {
