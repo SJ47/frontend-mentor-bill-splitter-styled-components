@@ -55,6 +55,8 @@ const SplitterContainer = () => {
 
     const handleTipPercChange = (value) => {
         setTipPerc(value);
+
+        console.log(value);
     };
 
     const handleReset = () => {

@@ -7,30 +7,25 @@ import {
 } from "./Tip.styled";
 
 const Tip = ({ handleTipPercChange, bg }) => {
+    const percIds = [{ id: 5 }, { id: 10 }, { id: 15 }, { id: 25 }, { id: 50 }];
+
+    const buttonList = percIds.map((btn) => {
+        return (
+            <StyledTipContent
+                key={btn.id}
+                onClick={() => handleTipPercChange(btn.id)}
+            >
+                {btn.id} %
+            </StyledTipContent>
+        );
+    });
+
     return (
         <>
             <StyledTipHeader>Select Tip %</StyledTipHeader>
             <StyledTipContainer>
-                <StyledTipContent onClick={() => handleTipPercChange(5)} bg={bg}>
-                    5%
-                </StyledTipContent>
-                <StyledTipContent onClick={() => handleTipPercChange(10)}>
-                    10%
-                </StyledTipContent>
-                <StyledTipContent
-                    onClick={() => handleTipPercChange(15)}
-                    defaultChecked
-                    // bg="var(--color-strong-cyan)"
-                    // fg="var(--color-very-dark-cyan)"
-                >
-                    15%
-                </StyledTipContent>
-                <StyledTipContent onClick={() => handleTipPercChange(25)}>
-                    25%
-                </StyledTipContent>
-                <StyledTipContent onClick={() => handleTipPercChange(50)}>
-                    50%
-                </StyledTipContent>
+                {buttonList}
+
                 <StyledTipCustom
                     placeholder="Custom"
                     type="number"
