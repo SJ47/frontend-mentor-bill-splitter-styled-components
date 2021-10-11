@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/78e8fe1d-367e-46f0-805d-db4d6c0e501d/deploy-status)](https://app.netlify.com/sites/eager-jang-fc6597/deploys)
+
 # Frontend Mentor - Tip calculator app solution
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
