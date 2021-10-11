@@ -55,6 +55,6 @@ I plan to continue getting more familiar and experience with Styled Components.
 
 ## Author
 
--   Website - [Add your name here](https://www.your-site.com)
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
--   Twitter - [@yourusername](https://www.twitter.com/yourusername)
+-   Website - [Scott Johnston](https://www.scottjohnston.dev)
+-   Frontend Mentor - [@SJ47](https://www.frontendmentor.io/profile/SJ47)
+-   Twitter - [@scottJ_Dev](https://www.twitter.com/scottJ_Dev)

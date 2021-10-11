@@ -64,5 +64,5 @@ export const StyledResultButton = styled.button`
     font-size: var(--fs-form-inputs);
     font-size: larger;
     font-weight: var(--fw-bold);
-
+    cursor: pointer;
 `;
